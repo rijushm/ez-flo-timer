@@ -1,0 +1,140 @@
+
+@font-face {
+    font-family: 'neontubes';
+    src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot");
+    src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot?#iefix") format("embedded-opentype"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff2") format("woff2"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff") format("woff"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.announcement-wrapper{
+    width: 100%;
+    overflow: hidden;
+}
+.announcement-wrapper .announcement-inner-wrapper{
+    width: 100%;
+    padding: 3.2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.announcement-wrapper .timer-wrapper{
+    display: flex;
+    gap: 44px;
+    margin-bottom: 28px;
+}
+.announcement-wrapper .timer-column h4{
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    opacity: 0.5;
+    line-height: 1;
+}
+.announcement-wrapper .timer-column p{
+    padding: 0;
+    margin: 0;
+    font-family: 'neontubes';
+    font-size: 32px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #00ff78,
+    0 0 80px #00ff78,
+    0 0 90px #00ff78,
+    0 0 100px #00ff78,
+    0 0 150px #00ff78;
+    -webkit-animation: buzz 0.0001s infinite alternate;
+          animation: buzz 0.0001s infinite alternate;
+}
+
+.announcement-wrapper .counter-title{
+    font-family: 'neontubes';
+    font-size: 44px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #00ff78,
+    0 0 80px #00ff78,
+    0 0 90px #00ff78,
+    0 0 100px #00ff78,
+    0 0 150px #00ff78;
+    -webkit-animation: blink 4s infinite alternate;
+            animation: blink 4s infinite alternate;
+}
+
+@media (max-width: 600px){
+    .announcement-wrapper .announcement-inner-wrapper{
+        padding: 2.4rem 0.6rem;
+    }
+    .announcement-wrapper .timer-wrapper{
+        gap: 36px;
+    }
+    .announcement-wrapper .counter-title{
+        font-family: 'neontubes';
+        font-size: 30px;
+    }
+    .announcement-wrapper .timer-column h4 {
+        font-size: 12px;
+    }
+    .announcement-wrapper .timer-column p{
+        font-size: 32px;
+    }
+}
+
+@-webkit-keyframes buzz {
+    70% {
+      opacity: 0.80;
+    }
+}
+   
+@keyframes buzz {
+    70% {
+      opacity: 0.80;
+    }
+}
+@-webkit-keyframes blink {
+    40% {
+      opacity: 1;
+    }
+    42% {
+      opacity: 0.8;
+    }
+    43% {
+      opacity: 1;
+    }
+    45% {
+      opacity: 0.2;
+    }
+    46% {
+      opacity: 1;
+    }
+}
+@keyframes blink {
+    40% {
+      opacity: 1;
+    }
+    42% {
+      opacity: 0.8;
+    }
+    43% {
+      opacity: 1;
+    }
+    45% {
+      opacity: 0.2;
+    }
+    46% {
+      opacity: 1;
+    }
+}
