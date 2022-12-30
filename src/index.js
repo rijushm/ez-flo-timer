@@ -2,6 +2,7 @@ require('./style.css')
 var moment = require('moment-timezone');
 
 const eventTimerCore = (data) =>{
+    console.log(data)
     const countDownDate = new Date(data.end).getTime()
 
     var currentTime = moment().tz(`${data.country}/${data.city}`).format();
@@ -33,7 +34,7 @@ const eventTimerCore = (data) =>{
     // Title
     const title = document.createElement("h3")
     title.classList.add('counter-title')
-    title.innerHTML = "Green Friday Cyber Monday Sale"
+    title.innerHTML = data.text
     announcementInnerWrapper.appendChild(title)
 
     //column

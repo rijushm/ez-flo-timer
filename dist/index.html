@@ -3,20 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Webpack App</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><script defer src="main.js"></script></head>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><script src="main.js"></script></head>
   <body>
     <div id="header-timer-ez-flo"></div>
-
     <script>
-      addEventListener('DOMContentLoaded', (event) => {
         cjco.eventTimer({
+          text: 'Green December',
           el: "#header-timer-ez-flo",
           background:"linear-gradient(0deg, rgba(0,0,0,0.86), rgba(0,0,0,0.86)), url('https://ezfloinjection.com/wp-content/uploads/small-green-leaves-in-hedge-wall-texture-backgroun-scaled-1.jpg') center center / cover no-repeat",
           end:"Dec 31, 2022 11:59:59",
           country: 'America',
           city: 'Los_Angeles'
         })
-      })
+
+        addEventListener('DOMContentLoaded', (event)=>{
+          var timerHeight = document.querySelector('.announcement-wrapper').offsetHeight;
+          var headerMain = document.querySelector('.header-hero');
+          if(isLogin == 1){
+            headerMain.style.top = timerHeight + 32 + 'px';
+          }else{
+            headerMain.style.top = timerHeight + 'px';
+          }
+        })
     </script>
   </body>
 </html>
